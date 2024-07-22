@@ -20,3 +20,15 @@ def spread(arg):
 
 def lcm(*args):
     numbers = []
+<Snippet>
+  <Code Language="CSharp">
+    <![CDATA[double root = Math.Sqrt($Number$);]]>
+  </Code>
+  <Declarations>
+    <Literal>
+      <ID>Number</ID>
+      <ToolTip>Enter the number you want the square root of.</ToolTip>
+      <Default>16</Default>
+    </Literal>
+  </Declarations>
+</Snippet>
