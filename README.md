@@ -32,3 +32,14 @@ def lcm(*args):
     </Literal>
   </Declarations>
 </Snippet>
+def host_is_pingable(ip):
+    return os.system(f"ping -c 1 {ip}")
+
+def wait_until(condition, description, timeout=300, period=5, *args, **kwargs):
+    final_time = time.time() + timeout
+    while time.time() < final_time:
+        output = condition(*args, **kwargs)
+        if output:
+            return output
+        time.sleep(period)
+    raise TimeoutError(f'Timed out waiting for condition: [{description}]')
